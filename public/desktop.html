@@ -25,8 +25,9 @@
                 newMark.setAttribute('response-type', 'arraybuffer');
                 newMark.setAttribute('gltf-model', '#sculpture')
                 newMark.setAttribute('material', 'color: #E4B056');
-                newMark.setAttribute('position', "1 1 0");
+                newMark.setAttribute('position', "1 1 10");
                 newMark.setAttribute('scale', '.01 .01 .01');
+                newMark.setAttribute('rotation', '0 180 0')
                 newMark.setAttribute('grabbable', {});
                 scene.appendChild(newMark);
 
@@ -62,7 +63,7 @@
               <audio id="space_music" src="assets/ancient_egypt.mp3" preloads="auto" crossorigin="anonymous"></audio>  
           </a-assets>
 
-        <a-entity camera wasd-controls look-controls position="0 1.8 7">
+        <a-entity camera look-controls position="0 1.8 7">
             <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200, objects:.interactive;"></a-entity>
             <a-cursor intersection-spwan="event:click; mixin:vovel"></a-cursor>
         </a-entity>
@@ -73,15 +74,15 @@
         <a-entity id="light" light="type: spot; angle: 45" position="0 10 50" insensity=".5"></a-entity>
       
             
-        <a-entity id="sun" position="0 15 -4">
-          <a-entity grabbable id="lightSphere" geometry="primitive:sphere" material="color:white; shader:flat" light="type: point" position="-250 15 -4"></a-entity>
+        <a-entity id="sun" position="0 35 -4">
+          <a-entity grabbable id="lightSphere" geometry="primitive:sphere" material="color:white; shader:flat" light="type: point" position="-250 35 -4"></a-entity>
         </a-entity>
 
 
 
 
        <!-- Button Sunrise-->
-        <a-entity id="universal button" position="0 0.5 10" shadow >
+        <a-entity id="universal button" position="0 0.5 5" shadow >
             <a-entity class="button interactive" position="0 .7 0" spinning-effect="90" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255,100,100)" shadow
             animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200;"
             animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200;"
@@ -91,7 +92,7 @@
 
 
         <!-- Button Instantiate-->
-        <a-entity id="instantiate button" position="2 0.5 10" shadow instantiate>
+        <a-entity id="instantiate button" position="2 0.5 5" shadow instantiate>
           <a-entity class="button interactive" position="0 0.7 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255,100,100)" shadow
           animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200;"
           animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200;"
